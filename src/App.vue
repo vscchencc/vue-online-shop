@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     init() {
-      console.log('---init-----')
+      console.log('---init-----');
     }
   }
 }
