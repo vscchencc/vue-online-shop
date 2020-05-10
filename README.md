@@ -1,5 +1,9 @@
 ### 单页面项目（vue）
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cc-ch/vue-online-shop)
 
+![GitHub](https://img.shields.io/github/license/cc-ch/vue-online-shop)
+
+![GitHub contributors](https://img.shields.io/github/contributors/cc-ch/vue-online-shop)
 ### 单页面电商 vue 项目
 
 #### 开源依赖部分
@@ -20,7 +24,8 @@
 6. utils存放公共工具方法
 7. store写vuex的数据和方法
 8. style里面存放公共样式
-9. dist是最终打包的目录
+9. mock里面存放模拟数据
+10. dist是最终打包的目录
 
 ```
 .
@@ -46,11 +51,17 @@
 │   │   ├── api.js
 │   │   └── http-server.js
 │   ├── components
+│   │   ├── navigationbar.vue
+│   │   └── test.vue
 │   ├── images
-│   │   └── haizeiwang.jpg
+│   │   ├── haizeiwang.jpg
+│   │   └── icon-strew.png
 │   ├── main.js
+│   ├── mock
+│   │   └── index.js
 │   ├── pages
 │   │   ├── home.vue
+│   │   ├── login.vue
 │   │   ├── page1.vue
 │   │   └── page2.vue
 │   ├── router
@@ -64,5 +75,5 @@
 ├── webpack.config.js
 └── webpack.prod.config.js
 
-13 directories, 26 files
+14 directories, 31 files
 ```
