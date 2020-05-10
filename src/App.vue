@@ -16,7 +16,7 @@ export default {
     this.init()
   },
   methods: {
-    init () {
+    init() {
       console.log('---init-----')
     }
   }

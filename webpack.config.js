@@ -1,20 +1,20 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+// const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: ['babel-polyfill', './src/main.js'], 
+  entry: ['babel-polyfill', './src/main.js'],
   output: {
-    path: path.resolve(__dirname, './dist'), 
-    // publicPath: '/', 
-    filename: 'build.js' 
+    path: path.resolve(__dirname, './dist'),
+    // publicPath: '/',
+    filename: 'build.js'
   },
   devtool: '#eval-source-map',
   devServer: {
-    historyApiFallback: true, 
-    overlay: true,
+    historyApiFallback: true,
+    overlay: true
     // proxy: {
     //   '/' : {
     //     target:" http://localhost",
@@ -140,4 +140,4 @@ module.exports = {
       }
     ]
   }
-};
+}
