@@ -10,7 +10,6 @@
 
 <script>
 import vNavigationbar from '@/components/navigationbar.vue'
-
 export default {
   name: 'Home',
   components: {
@@ -22,11 +21,11 @@ export default {
       password: ''
     }
   },
-  mounted() {
-    this.init();
+  mounted () {
+    this.init()
   },
   methods: {
-    init() {
+    init () {
       console.log('----123----')
     }
   }

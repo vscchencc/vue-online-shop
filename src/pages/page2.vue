@@ -1,16 +1,16 @@
 <template>
-    <div>
-      <h1>
-        Hello chencc
-      </h1>
-      <h1>{{ msg }}</h1>
-      <img src="../images/haizeiwang.jpg">
-      <input type="text" v-model="msg">
-    </div>
+  <div>
+    <h1>
+      Hello chencc
+    </h1>
+    <h1>{{ msg }}</h1>
+    <img src="../images/haizeiwang.jpg"></img>
+    <input type="text" v-model="msg"></input>
+  </div>
 </template>
 
 <script>
-import getData from '../utils/utils';
+import getData from '../utils/utils'
 export default {
   name: 'pageone',
   data () {
@@ -19,15 +19,15 @@ export default {
     }
   },
   created () {
-    this.fetchData();
+    this.fetchData()
   },
   mounted () {
     this.getExam()
   },
   methods: {
-    async fetchData() {
-      const data = await getData();
-      this.msg = data;
+    async fetchData () {
+      const data = await getData()
+      this.msg = data
     },
     getExam () {
       this.$server.exam().then(data => {

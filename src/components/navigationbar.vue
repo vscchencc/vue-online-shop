@@ -38,11 +38,11 @@ export default {
     return {
     }
   },
-  created() {
-    this.init();
+  created () {
+    this.init()
   },
   methods: {
-    init() {
+    init () {
       console.log('----123----')
     }
   }
@@ -63,14 +63,15 @@ export default {
       bottom:0;
       display: flex;
       li{
-        flex:1;/*平分空间*/
+        flex:1; /*平分空间*/
         a{
           height:100%;
           display: flex;
           flex-direction:column;
-          justify-content: center;/*水平居中*/
-          align-items:center;/*垂直居中*/}
-      } 
+          justify-content: center; /*水平居中*/
+          align-items:center; /*垂直居中*/
+        }
+      }
     }
   }
 </style>

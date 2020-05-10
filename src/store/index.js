@@ -16,20 +16,20 @@ const store = new Vuex.Store({
   },
   // 存放方法
   mutations: {
-    add(state, n) {
+    add (state, n) {
       state.count = state.count + n
     },
-    subtract(state) {
+    subtract (state) {
       state.count = state.count - 1
     }
   },
   // 通过actions提交mutations达到修改state中的值
   actions: {
-    adds(state, n) {
-      state.commit("add", n)
+    adds (state, n) {
+      state.commit('add', n)
     },
-    subtracts(state, n) {
-      state.commit("subtract", n)
+    subtracts (state, n) {
+      state.commit('subtract', n)
     }
   }
 })

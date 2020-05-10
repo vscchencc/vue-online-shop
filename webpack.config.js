@@ -24,7 +24,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.esm.js',
       '@': path.join(__dirname, './src')
     }
   },
@@ -52,21 +52,21 @@ module.exports = {
         },
         commons: {
           name: 'commons',
-          minChunks: 2,//Math.ceil(pages.length / 3), 当你有多个页面时，获取pages.length，至少被1/3页面的引入才打入common包
+          minChunks: 2, // Math.ceil(pages.length / 3), 当你有多个页面时，获取pages.length，至少被1/3页面的引入才打入common包
           chunks:'all',
           reuseExistingChunk: true
         }
       }
     },
     runtimeChunk: {
-        name: 'manifest'
+      name: 'manifest'
     }
   },
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-  　　filename: "css/[name]-buddle.css"
-　　 }),
+      filename: 'css/[name]-buddle.css'
+    }),
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: true,
@@ -77,28 +77,28 @@ module.exports = {
   ],
   module: {
     rules: [
-      { 
-          test: /\.css$/,
-          use: [
-              'vue-style-loader',
-              'css-loader'
-          ],
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
       },
       {
-          test: /\.scss$/,
-          use: [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader'
-          ],
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
-          test: /\.sass$/,
-          use: [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax'
-          ],
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader?indentedSyntax'
+        ]
       },
       {
         test: /\.js$/,
@@ -114,16 +114,23 @@ module.exports = {
         }
       },
       {
+        test: /\.(vue|js)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        // 预处理
+        enforce: 'pre'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
           loaders: {
-            'scss': [
+            scss: [
               'vue-style-loader',
               'css-loader',
               'sass-loader'
             ],
-            'sass': [
+            sass: [
               'vue-style-loader',
               'css-loader',
               'sass-loader?indentedSyntax'

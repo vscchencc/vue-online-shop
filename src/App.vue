@@ -1,29 +1,26 @@
 <template>
   <div>
-     <router-view />
+     <router-view></router-view>
   </div>
 </template>
 
 <script>
-
-  import getData from './utils/utils';
-
-  export default {
-    name: 'app',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js'
-      }
-    },
-    created() {
-      this.init();
-    },
-    methods: {
-      init() {
-        console.log('---init-----')
-      }
+export default {
+  name: 'app',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js'
+    }
+  },
+  created () {
+    this.init()
+  },
+  methods: {
+    init () {
+      console.log('---init-----')
     }
   }
+}
 </script>
 
 <style lang="scss">

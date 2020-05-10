@@ -1,10 +1,7 @@
-### 单页面项目（vue）
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cc-ch/vue-online-shop)
-
-![GitHub](https://img.shields.io/github/license/cc-ch/vue-online-shop)
-
+### 单页面电商 vue 项目 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cc-ch/vue-online-shop) 
+![GitHub](https://img.shields.io/github/license/cc-ch/vue-online-shop) 
 ![GitHub contributors](https://img.shields.io/github/contributors/cc-ch/vue-online-shop)
-### 单页面电商 vue 项目
 
 #### 开源依赖部分
 1. axios

@@ -5,18 +5,17 @@
 </template>
 
 <script>
-
 export default {
   name: 'Login',
   data () {
     return {
     }
   },
-  created() {
-    this.init();
+  created () {
+    this.init()
   },
   methods: {
-    init() {
+    init () {
       console.log('----login----')
     }
   }
