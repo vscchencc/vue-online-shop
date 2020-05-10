@@ -18,6 +18,7 @@ export default {
   methods: {
     init() {
       console.log('---init-----');
+      console.log('----test lint ------');
     }
   }
 }
