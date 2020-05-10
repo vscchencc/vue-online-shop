@@ -1,12 +1,17 @@
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from 'vue'
+import App from './App.vue'
 
 import router from './router/index.js'
 import store from './store'
 
-import './style/common.scss';
+import 'normalize.css'
+import './style/common.scss'
+
 
 import { server } from './axios/api'
+
+// 引入mockjs
+require('./mock/index')
 
 //定义全局变量
 Vue.prototype.$server = server;

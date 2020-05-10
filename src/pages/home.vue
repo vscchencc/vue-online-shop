@@ -4,20 +4,25 @@
       <router-link to="/page1">Home</router-link>
       <router-link to="/page2">About</router-link>
     </p>
+    <v-navigationbar></v-navigationbar>
   </div>
 </template>
 
 <script>
+import vNavigationbar from '@/components/navigationbar.vue'
 
 export default {
   name: 'Home',
+  components: {
+    vNavigationbar
+  },
   data () {
     return {
       username: '1',
       password: ''
     }
   },
-  created() {
+  mounted() {
     this.init();
   },
   methods: {

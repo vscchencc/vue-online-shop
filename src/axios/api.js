@@ -8,6 +8,6 @@ import { fetch, post, patch, put } from './http-server'
 */
 export const server = {
   exam: function(paramObj){
-      return fetch('/api/v2/movie/in_theaters',paramObj);
+      return fetch('/api/data',paramObj);
   }
 }

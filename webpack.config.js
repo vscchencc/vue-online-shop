@@ -15,15 +15,12 @@ module.exports = {
   devServer: {
     historyApiFallback: true, 
     overlay: true,
-    proxy: {
-      '/api' : {
-        target:" https://api.douban.com/ ",
-        changeOrigin: true,
-        pathRewrite: {
-            ' ^/api ' : ''
-          }
-       }
-    }
+    // proxy: {
+    //   '/' : {
+    //     target:" http://localhost",
+    //     changeOrigin: true
+    //   }
+    // }
   },
   resolve: {
     alias: {
