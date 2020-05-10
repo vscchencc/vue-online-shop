@@ -16,9 +16,8 @@ export default {
     this.init()
   },
   methods: {
-    init() {
-      console.log('---init-----');
-      console.log('----test lint ------');
+    init () {
+      console.log('---init-----')
     }
   }
 }
