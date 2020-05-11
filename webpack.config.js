@@ -13,6 +13,13 @@ module.exports = {
   },
   devtool: '#eval-source-map',
   devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    // 启动的服务端口
+    port: 8000,
+    // 通过localhost或IP进行访问
+    host: 'localhost',
+    // 热加载，功能：只渲染所改组件的页面效果，不会全部刷新，其他页面数据依然会存在
+    hot: true,
     historyApiFallback: true,
     overlay: true
     // proxy: {
