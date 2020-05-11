@@ -5,6 +5,9 @@
       <router-link to="/page2">About</router-link>
     </p>
     <v-navigationbar></v-navigationbar>
+    <a href="" @click="handleSetLanguage('zh-CN')">中文</a>
+    <a href="" @click="handleSetLanguage('en-US')">English</a>
+    <span>{{$t('login.title')}}</span>
   </div>
 </template>
 
@@ -27,6 +30,10 @@ export default {
   methods: {
     init () {
       console.log('----123----')
+    },
+    handleSetLanguage (lang) {
+      this.$i18n.locale = 'en-US'
+      this.$store.dispatch('setLanguage', lang)
     }
   }
 }

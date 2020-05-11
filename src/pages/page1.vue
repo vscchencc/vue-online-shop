@@ -4,7 +4,7 @@
     <div>
       <h3>这里是直接state取出来</h3>
       {{count}}
-      <h3>这里是直接state取出来</h3>
+      <h3>这里是计算过的</h3>
       {{changeCount}}
     </div>
     <v-test></v-test>
@@ -22,7 +22,9 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   name: 'pageone',
   computed: {
-    ...mapState(['count']),
+    ...mapState({
+      count: state => state.calculate.count
+    }),
     ...mapGetters(['changeCount'])
   },
   components: {
