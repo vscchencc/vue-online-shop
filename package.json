@@ -5,8 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --hot --mode development",
+<<<<<<< HEAD
     "build": "webpack --config ./webpack.prod.config.js --progress --hide-modules --mode production",
     "analyz": "cross-env NODE_ENV=production npm run build",
+=======
+    "build": "webpack --config webpack.prod.config.js --progress --hide-modules --mode production",
+    "analyz": "cross-env NODE_ENV=production npm run build",
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
     "lint": "./node_modules/.bin/eslint --ext .js --ext .vue src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +21,13 @@
       "pre-commit": "npm run lint"
     }
   },
+<<<<<<< HEAD
+=======
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cc-ch/vue-online-shop.git"
@@ -34,15 +47,26 @@
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "css-loader": "^3.5.3",
+<<<<<<< HEAD
     "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^6.0.0",
     "font-awesome": "^4.7.0",
     "js-cookie": "^2.2.1",
+=======
+<<<<<<< HEAD
+    "eslint-plugin-vue": "^6.2.2",
+=======
+>>>>>>> 06c207c... 'twice'
+    "file-loader": "^6.0.0",
+>>>>>>> d00ac21... 'twice'
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
+<<<<<<< HEAD
     "vue-i18n": "^8.17.5",
+=======
+>>>>>>> d00ac21... 'twice'
     "vue-loader": "^15.9.2",
     "vue-router": "^3.1.6",
     "vue-style-loader": "^4.1.2",
@@ -55,6 +79,10 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.4",
     "eslint": "^7.0.0",
@@ -67,6 +95,13 @@
     "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
+<<<<<<< HEAD
+=======
+=======
+    "babel-loader": "^8.0.4",
+    "html-webpack-plugin": "^4.3.0",
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
     "mini-css-extract-plugin": "^0.9.0",
     "mockjs": "^1.1.0",
     "webpack-bundle-size-analyzer": "^3.1.0",

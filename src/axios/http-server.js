@@ -6,6 +6,10 @@ axios.defaults.timeout = 5000
 // http request 拦截器
 axios.interceptors.request.use(
   config => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
     config.data = JSON.stringify(config.data)
     config.headers = {
       'Content-Type': 'application/x-www-form-urlencoded'
@@ -18,12 +22,33 @@ axios.interceptors.request.use(
 )
 
 // 响应拦截器即异常处理
+<<<<<<< HEAD
+=======
+=======
+    config.data = JSON.stringify(config.data);
+    config.headers = {
+      'Content-Type':'application/x-www-form-urlencoded'
+    }
+    return config;
+  },
+  error => {
+    return Promise.reject(err);
+  }
+)
+
+//响应拦截器即异常处理
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
 axios.interceptors.response.use(response => {
   return response
 }, err => {
   if (err && err.response) {
     switch (err.response.status) {
       case 400:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
         console.log('错误请求')
         break
       case 401:
@@ -59,6 +84,46 @@ axios.interceptors.response.use(response => {
       case 505:
         console.log('http版本不支持该请求')
         break
+<<<<<<< HEAD
+=======
+=======
+          console.log('错误请求')
+        break;
+      case 401:
+          console.log('未授权，请重新登录')
+        break;
+      case 403:
+        console.log('拒绝访问')
+        break;
+      case 404:
+        console.log('请求错误,未找到该资源')
+        break;
+      case 405:
+        console.log('请求方法未允许')
+        break;
+      case 408:
+        console.log('请求超时')
+        break;
+      case 500:
+        console.log('服务器端出错')
+        break;
+      case 501:
+        console.log('网络未实现')
+        break;
+      case 502:
+        console.log('网络错误')
+        break;
+      case 503:
+        console.log('服务不可用')
+        break;
+      case 504:
+        console.log('网络超时')
+        break;
+      case 505:
+        console.log('http版本不支持该请求')
+        break;
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
       default:
         console.log(`连接错误${err.response.status}`)
     }
@@ -75,6 +140,10 @@ axios.interceptors.response.use(response => {
  * @returns {Promise}
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
 export function fetch (url, params = {}) {
   return new Promise((resolve, reject) => {
     axios.get(url, {
@@ -82,11 +151,32 @@ export function fetch (url, params = {}) {
     }).then(response => {
       resolve(response.data)
     }).catch(err => {
+<<<<<<< HEAD
+=======
+=======
+export function fetch(url, params={}){
+  return new Promise((resolve,reject) => {
+    axios.get(url,{
+      params:params
+    })
+    .then(response => {
+      resolve(response.data);
+    })
+    .catch(err => {
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
       reject(err)
     })
   })
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
 /**
  * 封装post请求
  * @param url
@@ -94,6 +184,10 @@ export function fetch (url, params = {}) {
  * @returns {Promise}
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
 export function post (url, data = {}) {
   return new Promise((resolve, reject) => {
     axios.post(url, data).then(response => {
@@ -105,12 +199,33 @@ export function post (url, data = {}) {
 }
 
 /**
+<<<<<<< HEAD
+=======
+=======
+ export function post(url,data = {}){
+   return new Promise((resolve,reject) => {
+     axios.post(url,data)
+          .then(response => {
+            resolve(response.data);
+          },err => {
+            reject(err)
+          })
+   })
+ }
+
+ /**
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
  * 封装patch请求
  * @param url
  * @param data
  * @returns {Promise}
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
 export function patch (url, data = {}) {
   return new Promise((resolve, reject) => {
     axios.patch(url, data).then(response => {
@@ -122,12 +237,33 @@ export function patch (url, data = {}) {
 }
 
 /**
+<<<<<<< HEAD
+=======
+=======
+export function patch(url,data = {}){
+  return new Promise((resolve,reject) => {
+    axios.patch(url,data)
+         .then(response => {
+           resolve(response.data);
+         },err => {
+           reject(err)
+         })
+  })
+}
+
+ /**
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
  * 封装put请求
  * @param url
  * @param data
  * @returns {Promise}
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d00ac21... 'twice'
 export function put (url, data = {}) {
   return new Promise((resolve, reject) => {
     axios.put(url, data).then(response => {
@@ -137,3 +273,18 @@ export function put (url, data = {}) {
     })
   })
 }
+<<<<<<< HEAD
+=======
+=======
+export function put(url,data = {}){
+  return new Promise((resolve,reject) => {
+    axios.put(url,data)
+         .then(response => {
+           resolve(response.data);
+         },err => {
+           reject(err)
+         })
+  })
+}
+>>>>>>> 06c207c... 'twice'
+>>>>>>> d00ac21... 'twice'
