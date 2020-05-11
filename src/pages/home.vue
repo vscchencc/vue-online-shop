@@ -34,6 +34,7 @@ export default {
     handleSetLanguage (lang) {
       this.$i18n.locale = 'en-US'
       this.$store.dispatch('setLanguage', lang)
+      console.log('----123----')
     }
   }
 }

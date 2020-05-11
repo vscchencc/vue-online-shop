@@ -3,36 +3,23 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   entry: ['babel-polyfill', './src/main.js'],
   output: {
-    path: path.resolve(__dirname, './dist'),
-    // publicPath: '/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, '../dist'),
+    // publicPath: '/dist/',
+    filename: 'js/[name].bundle.js',
+    chunkFilename: 'js/[id].chunk.js'
   },
-  devtool: '#eval-source-map',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    // 启动的服务端口
-    port: 8000,
-    // 通过localhost或IP进行访问
-    host: 'localhost',
-    // 热加载，功能：只渲染所改组件的页面效果，不会全部刷新，其他页面数据依然会存在
-    hot: true,
-    historyApiFallback: true,
-    overlay: true
-    // proxy: {
-    //   '/' : {
-    //     target:" http://localhost",
-    //     changeOrigin: true
-    //   }
-    // }
-  },
-  resolve: {
-    alias: {
-      vue$: 'vue/dist/vue.esm.js',
-      '@': path.join(__dirname, '/src')
+  performance: {
+    hints: 'warning',
+    maxEntrypointSize: 50000000,
+    maxAssetSize: 30000000,
+    // 只给出 js 文件的性能提示
+    assetFilter: function (assetFilename) {
+      return assetFilename.endsWith('.js')
     }
   },
   optimization: {
@@ -69,6 +56,13 @@ module.exports = {
       name: 'manifest'
     }
   },
+  devtool: false,
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.esm.js',
+      '@': path.join(__dirname, '../src')
+    }
+  },
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
@@ -81,6 +75,7 @@ module.exports = {
         removeComments: true
       }
     })
+    // new BundleAnalyzerPlugin()
   ],
   module: {
     rules: [
@@ -88,6 +83,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader'
         ]
       },
@@ -95,6 +91,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'vue-style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
         ]
@@ -103,6 +100,7 @@ module.exports = {
         test: /\.sass$/,
         use: [
           'vue-style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader?indentedSyntax'
         ]
@@ -117,19 +115,14 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]',
+          outputPath: './images',
+          publicPath: './images',
           esModule: false
         }
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'file-loader'
-      },
-      {
-        test: /\.(vue|js)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-        // 预处理
-        enforce: 'pre'
       },
       {
         test: /\.vue$/,

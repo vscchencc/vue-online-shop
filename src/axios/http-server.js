@@ -6,6 +6,7 @@ axios.defaults.timeout = 5000
 // http request 拦截器
 axios.interceptors.request.use(
   config => {
+    // 响应拦截器即异常处理
     config.data = JSON.stringify(config.data)
     config.headers = {
       'Content-Type': 'application/x-www-form-urlencoded'

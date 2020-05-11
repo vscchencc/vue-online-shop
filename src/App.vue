@@ -1,7 +1,5 @@
 <template>
-  <div>
-     <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -22,13 +20,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-    #app {
-        font-family: "Avenir", Helvetica, Arial, sans-serif;
-
-        h1 {
-            color: #CC3333;
-        }
-    }
-</style>
