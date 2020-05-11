@@ -4,7 +4,11 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/cc-ch/vue-online-shop)
 
 #### 开源依赖部分
-1. axios
+* Vue
+* Vue-router
+* Axios
+* ES6
+* Sass
 
 #### 命令
 

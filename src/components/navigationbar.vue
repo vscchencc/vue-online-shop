@@ -3,27 +3,32 @@
     <ul class="footer">
         <li>
             <a href="#">
-                <span>购物车</span>
+              <i class="fa fa-camera-retro fa-lg"></i>
+              <span>购物车</span>
             </a>
         </li>
         <li>
             <a href="#">
-                <span>文件</span>
+              <i class="fa fa-bomb fa-lg"></i>
+              <span>文件</span>
             </a>
         </li>
         <li>
             <a href="#">
-                <span>扫描</span>
+              <i class="fa fa-coffee fa-lg"></i>
+              <span>扫描</span>
             </a>
         </li>
         <li>
             <a href="#">
-                <span>箭头</span>
+              <i class="fa fa-car fa-lg"></i>
+              <span>箭头</span>
             </a>
         </li>
         <li>
             <a href="#">
-                <span>箭头</span>
+              <i class="fa fa-camera-retro fa-lg"></i>
+              <span>箭头</span>
             </a>
         </li>
     </ul>

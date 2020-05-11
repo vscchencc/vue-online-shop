@@ -5,6 +5,7 @@ import router from './router/index.js'
 import store from './store'
 
 import 'normalize.css'
+import 'font-awesome/css/font-awesome.css'
 import './style/common.scss'
 
 import { server } from './axios/api'

@@ -25,7 +25,7 @@ module.exports = {
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      '@': path.join(__dirname, './src')
+      '@': path.join(__dirname, '/src')
     }
   },
   optimization: {
@@ -35,7 +35,7 @@ module.exports = {
       maxInitialRequests: 6,
       cacheGroups: {
         dll: {
-          chunks:'all',
+          chunks: 'all',
           test: /[\\/]node_modules[\\/](core-js|vue|vue-router)[\\/]/,
           name: 'dll',
           priority: 2,
@@ -43,7 +43,7 @@ module.exports = {
           reuseExistingChunk: true
         },
         superSlide: {
-          chunks:'all',
+          chunks: 'all',
           test: /[\\/]src[\\/]/,
           name: 'superSlide',
           priority: 1,
@@ -53,7 +53,7 @@ module.exports = {
         commons: {
           name: 'commons',
           minChunks: 2, // Math.ceil(pages.length / 3), 当你有多个页面时，获取pages.length，至少被1/3页面的引入才打入common包
-          chunks:'all',
+          chunks: 'all',
           reuseExistingChunk: true
         }
       }
@@ -103,7 +103,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/  
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -112,6 +112,10 @@ module.exports = {
           name: '[name].[ext]?[hash]',
           esModule: false
         }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'file-loader'
       },
       {
         test: /\.(vue|js)$/,
