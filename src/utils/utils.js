@@ -1,5 +1,5 @@
-export default function getData() {
+export default function getData () {
   return new Promise((resolve, reject) => {
-      resolve('ok');
+    resolve('ok')
   })
 }

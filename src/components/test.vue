@@ -12,11 +12,11 @@ export default {
     return {
     }
   },
-  created() {
-    this.init();
+  created () {
+    this.init()
   },
   methods: {
-    init() {
+    init () {
       console.log('----123----')
     }
   }
