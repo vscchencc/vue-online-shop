@@ -8,6 +8,7 @@
     "build": "webpack --config ./webpack/webpack.prod.config.js --progress --hide-modules --mode production",
     "analyz": "cross-env NODE_ENV=production npm run build",
     "lint": "./node_modules/.bin/eslint --ext .js --ext .vue src/",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
