@@ -1,7 +1,7 @@
 <template>
   <div class="initial">
     <div class="initial-content">
-      这里放海报
+      <Swiper></Swiper>
     </div>
     <div class="initial-button-wrapper">
       <div class="register" @click="goToRegister">注册</div>
@@ -11,7 +11,11 @@
 </template>
 
 <script>
+import Swiper from '../components/swiper.vue'
 export default {
+  components: {
+    Swiper
+  },
   methods: {
     goToLogin () {
       this.$router.push('/login')
