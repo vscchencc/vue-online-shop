@@ -24,8 +24,28 @@ vue2.6 +
 
 eslint校验 npm run lint
 
+eslint修复 npm run lint-fix
+
 分析包大小 npm run analyz (需要放开webpack.prod.config配置中的BundleAnalyzerPlugin)
 
+#### commit提交规范
+
+commit 提交使用 angular 提交规范
+
+##### 提交步骤  
+* git add .
+* git cz (这里根据提示输入相关commit内容)
+* git push
+
+##### 版本发布流程
+* git pull origin master
+
+* git fetch origin --prune
+
+  __1.0.0 表示当前要发布的版本__
+* npm run release -- --release-as 1.0.0
+
+* git push --follow-tags origin master
 
 #### 目录结构
 1. 开发内容都在src中
@@ -115,3 +135,13 @@ eslint校验 npm run lint
 
 17 directories, 51 files
 ```
+
+### Features
+1. 前端 H5
+    - [x] 引导页轮播图
+    - [ ] 登陆
+    - [ ] 注册
+    - [ ] 首页
+    - [ ] 发现
+    - [ ] 好货
+    - [ ] 个人中心
