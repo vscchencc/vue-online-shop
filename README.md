@@ -26,6 +26,7 @@ eslint校验 npm run lint
 
 分析包大小 npm run analyz (需要放开webpack.prod.config配置中的BundleAnalyzerPlugin)
 
+
 #### 目录结构
 1. 开发内容都在src中
 2. axios中是接口拦截和所有接口
