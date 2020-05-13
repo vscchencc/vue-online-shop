@@ -49,6 +49,7 @@ export default {
       @include center;
       border-radius: px2rem(10);
       margin-bottom: px2rem(100);
+      z-index: 100;
     }
   }
 }

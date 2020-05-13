@@ -6,9 +6,12 @@ import store from './store'
 
 import i18n from './lang'
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 import 'normalize.css'
 import 'font-awesome/css/font-awesome.css'
 import './style/common.scss'
+import 'swiper/css/swiper.css'
 
 import { server } from './axios/api'
 
@@ -17,6 +20,8 @@ require('./mock/index')
 
 // 定义全局变量
 Vue.prototype.$server = server
+
+Vue.use(VueAwesomeSwiper)
 
 // eslint-disable-next-line no-new
 new Vue({
