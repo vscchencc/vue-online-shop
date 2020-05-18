@@ -7,8 +7,8 @@
             </a>
         </li>
         <li>
-            <a href="#">
-                <span>文件</span>
+            <a href="#" @click="goDiscover">
+                <span>发现</span>
             </a>
         </li>
         <li>
@@ -55,6 +55,9 @@ export default {
     },
     jumplogin () {
       this.$router.push('/login')
+    },
+    goDiscover () {
+      this.$router.push('/discover')
     }
   }
 }

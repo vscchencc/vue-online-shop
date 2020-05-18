@@ -7,6 +7,7 @@ import Pageone from '@/pages/page1.vue'
 import Pagetwo from '@/pages/page2.vue'
 import Initial from '../pages/initial.vue'
 import Register from '../pages/register.vue'
+import Discover from '../pages/discover.vue'
 
 Vue.use(VueRouter)
 
@@ -14,7 +15,7 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      redirect: '/initial'
+      redirect: '/home'
     },
     {
       path: '/initial',
@@ -39,6 +40,10 @@ export default new VueRouter({
     {
       path: '/page2',
       component: Pagetwo
+    },
+    {
+      path: '/discover',
+      component: Discover
     }
   ]
 })
