@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../style/common.scss";
+@import "./../../style/common.scss";
   .searchBox{
     .search-wrapper{
       box-sizing: border-box;
